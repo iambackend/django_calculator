@@ -1,14 +1,22 @@
 <div class="center">
-    <h1>Basic Calculator</h1>
-    
-    <form action="result">
-        <input type="search" name="formula" placeholder="Enter your request">
 
-        <button type="submit" name="calculate">Calulate!</button>
+    <form action="/" >
+        <input type="search" name="formula" placeholder="Ente your request" value="{{formula}}">
+
+        <button type="submit">Calulate!</button>
     
     </form>
-    </div>
+
+    {% if ans %}
+        The result is: 
+        <h1>{{ans}}</h1>
+    {% endif %}
+
+    {% if trace %}
+        <pre>{{ trace }}</pre>
+    {% endif %}
     
+    </div>
     <style>
       .center {
         margin: auto;
@@ -17,4 +25,3 @@
         padding: 10px;
       }
     </style>
-    
